@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="section confirmation-container">
+
+    <div class="card" id="confirmCard">
+
+        <h2>Confirm Your Booking</h2>
+
+        <!-- Flight and route summary -->
+        <div class="confirmation-block">
+            <h3>Booking Summary</h3>
+
+            <div id="summary">
+                Loading booking details...
+            </div>
+        </div>
+
+        <!-- Passenger details and individual seat preferences -->
+        <div class="confirmation-block">
+            <h3>Passengers & Seat Preferences</h3>
+
+            <div id="passList">
+                Loading passenger details...
+            </div>
+        </div>
+
+        <!-- Fare breakdown -->
+        <div class="confirmation-block">
+            <h3>Fare Details</h3>
+
+            <div class="fare-row">
+                <span>Base Fare</span>
+                <span id="baseFare">₹0</span>
+            </div>
+
+            <div class="fare-row">
+                <span>Seat Surcharge</span>
+                <span id="seatSurcharge">₹0</span>
+            </div>
+
+            <div class="fare-row final-price">
+                <span>Final Price</span>
+                <span id="finalPrice">₹0</span>
+            </div>
+        </div>
+
+        <!-- Booking actions -->
+        <div class="confirmation-actions">
+
+            <button id="confirmBtn" class="btn">
+                Book Ticket
+            </button>
+
+            <button type="button" class="btn" id="cancelBookingBtn">
+                Cancel
+            </button>
+
+        </div>
+
+        <!-- Status and error messages -->
+        <p
+                id="confirmationMessage"
+                class="confirmation-message muted"
+                role="status"
+                aria-live="polite">
+        </p>
+
+    </div>
+
+</main>
+
+<script type="module" src="js/ui/confirmation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* Reviews */
+#reviews {
+    background-color: white;
+    width: 65%;
+    margin: auto;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+#reviews:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.review {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    max-width: 900px;
+    margin: 16px auto;
+}
+
+.review-card {
+    background-color: wheat;
+    width: 20%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+.review-card:hover {
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.review-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-top: 5px;
+}
+
+.review-text {
+    text-align: left;
+}
+
+.stars {
+    color: #f5a623;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.author {
+    font-weight: 700;
+}
+
+/* Contact */
+.director {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 12px;
+}
+
+#directorImg {
+    transition: 0.3s ease;
+}
+
+#directorImg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Bookings */
+#latestBooking {
+    margin-top: 8px;
+}

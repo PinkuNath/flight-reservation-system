@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#book">Book Ticket</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a id="nav-login" href="#">Login</a>
+    <a id="nav-user" href="#mybookings" class="hidden"></a>
+    <a id="nav-logout" href="#" class="hidden">Logout</a>
+    <a href="#mybookings">My Bookings</a>
+</nav>
+
+<main>
+    <section id="home" class="section hero">
+        <div class="hero-card">
+            <h1 class="cool-heading">Java Airlines ᯓ ✈︎</h1>
+            <div class="intro-card">
+                <h2>Safe. Comfortable. Affordable.</h2>
+                <p>Flights connecting Silchar, Kolkata, Delhi, Mumbai, Guwahati, and Chennai.</p>
+                <p>Modern aircraft, trained crew, and easy booking — travel with peace of mind.</p>
+            </div>
+            <a class="btn" href="#book">Book a Flight</a>
+        </div>
+    </section>
+
+    <section id="book" class="section">
+        <h2>Book Your Flight</h2>
+
+        <div id="bookBox" class="card">
+
+            <!-- Step 1: Route and passenger count -->
+            <div id="step1" class="step">
+                <div class="row">
+                    <select id="from" class="book-input" aria-label="From city">
+                        <option value="">From</option>
+                        <option>Silchar</option>
+                        <option>Kolkata</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Guwahati</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <select id="to" class="book-input" aria-label="To city">
+                        <option value="">To</option>
+                        <option>Silchar</option>
+                        <option>Kolkata</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Guwahati</option>
+                        <option>Chennai</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <input id="date" class="book-input" type="date">
+                    <input id="pcount" class="book-input" type="number"
+                           min="1" placeholder="Number of passengers">
+                </div>
+
+                <div class="row">
+                    <button id="toPassengerBtn" class="btn">
+                        Next — Passenger Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Passenger details -->
+            <div id="step2" class="step hidden">
+                <h3>Passenger Details</h3>
+                <div id="passengerForms" class="passenger-forms"></div>
+
+                <div class="row">
+                    <button id="toFlightsBtn" class="btn">
+                        Continue — Show Flights
+                    </button>
+                    <button id="backToStep1" class="btn alt">
+                        Back
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Available flights -->
+            <div id="step3" class="step hidden">
+                <h3>Available Flights</h3>
+                <p class="muted">
+                    Choose one of the following flights for your selected route.
+                </p>
+
+                <div class="flight-list" id="flightList">
+                    <!-- Flight cards injected by JS -->
+                </div>
+
+                <div id="pricePreview" class="price-preview">
+                    Select a flight to see the base fare.
+                </div>
+
+                <div class="row">
+                    <button id="backToPassengers" class="btn alt">
+                        Back
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="card">
+            <h2>About & Policies</h2>
+            <p>Java Airlines is committed to safe, punctual and friendly service across key domestic routes.</p>
+
+            <h3>Rules & Regulations</h3>
+            <p>Carry government-issued photo ID (Aadhaar/PAN/Passport).</p>
+            <p>Check-in closes 45 minutes before departure.</p>
+            <p>Baggage: 15kg checked + 7kg cabin.</p>
+            <p>No hazardous or restricted items allowed.</p>
+            <p>Window seat costs +₹300 per passenger.</p>
+
+            <h3>Precautions</h3>
+            <p>Sanitize hands; report if unwell before boarding.</p>
+            <p>Follow crew instructions for safety.</p>
+            <p>Avoid crowding during boarding and deplaning.</p>
+        </div>
+    </section>
+
+    <section id="reviews" class="section">
+        <h2>Passenger Reviews</h2>
+
+        <div class="review-card">
+<!--            <img src="assets/review-1.jpg" alt="Ram" class="review-img">-->
+            <div class="review-text">
+                <div class="stars">★★★★☆</div>
+                <p>Fast boarding, courteous crew and comfortable seats. On-time departure — very satisfied!</p>
+                <p class="author">— Ram</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+<!--            <img src="assets/review-2.jpg" alt="Pinku" class="review-img">-->
+            <div class="review-text">
+                <div class="stars">★★★★☆</div>
+                <p>Affordable fares and smooth check-in process. Staff was helpful throughout the journey.</p>
+                <p class="author">— Pinku</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+<!--            <img src="assets/review-3.jpg" alt="Sita" class="review-img">-->
+            <div class="review-text">
+                <div class="stars">★★★★☆</div>
+                <p>Booking online was easy; the flight was comfortable. Recommended for domestic travel.</p>
+                <p class="author">— Sita</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="card">
+            <h2>Contact</h2>
+            <p>GitHub: <a class="myContact" href="https://github.com/PinkuNath">github.com/PinkuNath</a></p>
+            <p>LinkedIn: <a class="myContact" href="https://www.linkedin.com/in/pinku-nath">linkedin.com/in/pinku-nath</a></p>
+            <img id="directorImg" src="assets/executive.jpg" alt="Executive Director" class="director">
+        </div>
+    </section>
+
+    <section id="mybookings" class="section">
+        <h2>My Bookings</h2>
+        <div id="bookingsList" class="card">
+            <p id="noBooking" class="muted">No bookings yet.</p>
+            <div id="latestBooking"></div>
+        </div>
+    </section>
+</main>
+
+<!-- Auth modal -->
+<div id="authModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <button id="authClose" class="close">✕</button>
+
+        <div id="loginForm">
+            <h3>Login</h3>
+            <input id="loginUser" class="modal-input" placeholder="Username">
+            <input id="loginPass" class="modal-input" placeholder="Password" type="password">
+            <div class="row">
+                <button id="loginSubmit" class="btn">Login</button>
+            </div>
+            <p class="muted">
+                Don't have an account?
+                <button id="showSignup" class="linkish">Sign up</button>
+            </p>
+            <p id="authMsg" class="muted"></p>
+        </div>
+
+        <div id="signupForm" class="hidden">
+            <h3>Sign up</h3>
+
+            <input type="text" id="signupUsername" class="modal-input"
+                   placeholder="Choose a username" minlength="4" maxlength="20"
+                   pattern="[a-zA-Z][a-zA-Z0-9_]*"
+                   title="Username must start with a letter and contain only letters, numbers or underscores"
+                   required>
+
+            <input type="text" id="signupFullName" class="modal-input"
+                   placeholder="Full Name" maxlength="100" required>
+
+            <input type="email" id="signupEmail" class="modal-input"
+                   placeholder="Email Address" maxlength="150" required>
+
+            <input type="tel" id="signupPhone" class="modal-input"
+                   placeholder="Phone Number (Optional)" maxlength="15">
+
+            <input type="password" id="signupPass" class="modal-input"
+                   placeholder="Choose a password" minlength="8"
+                   maxlength="72" required>
+
+            <div class="row">
+                <button id="signupSubmit" class="btn">Create account</button>
+            </div>
+
+            <p class="muted">
+                Already have an account?
+                <button id="showLogin" class="linkish">Login</button>
+            </p>
+            <p id="signupMsg" class="muted"></p>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
